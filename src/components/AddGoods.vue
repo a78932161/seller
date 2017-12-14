@@ -13,7 +13,7 @@
     <el-form-item label="描述">
       <el-input v-model="formLabelAlign.describe"></el-input>
     </el-form-item>
-    <el-form-item label="介绍">7
+    <el-form-item label="介绍">
       <el-input v-model="formLabelAlign.introduce" :rows="2" type="textarea"></el-input>
     </el-form-item>
     <el-form-item label="图片">
