@@ -23,9 +23,17 @@
         </el-submenu>
       <el-submenu index="3-1">
         <template slot="title">类目</template>
+        <el-menu-item-group>
+          <template slot="title">操作</template>
+          <router-link :to="{name:'categorylist'}">
+            <el-menu-item index="3-2">列表</el-menu-item>
+          </router-link>
+          <router-link :to="{name:'modifycategory'}">
+            <el-menu-item index="3-3">新增</el-menu-item>
+          </router-link>
+        </el-menu-item-group>
       </el-submenu>
         <el-menu-item-group>
-            <template slot="title">操作</template>
             <el-menu-item index="4-1">登出</el-menu-item>
         </el-menu-item-group>
     </el-menu>

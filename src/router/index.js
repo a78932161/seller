@@ -5,6 +5,8 @@ import AddGoods from '@/components/AddGoods'
 import GoodsList from '@/components/GoodsList'
 import Modifygoods from '@/components/Modifygoods'
 import Order from '@/components/Order'
+import categorylist from '@/components/CategoryList'
+import modifycategory from '@/components/Modifycategory'
 
 Vue.use(Router)
 
@@ -34,6 +36,16 @@ export default new Router({
       path: '/order',
       name: 'order',
       component: Order
-    }
+    },
+    {
+      path: '/categorylist',
+      name: 'categorylist',
+      component: categorylist
+    },
+    {
+      path: '/modifycategory',
+      name: 'modifycategory',
+      component: modifycategory
+    },
   ]
 })

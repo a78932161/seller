@@ -90,7 +90,8 @@ export default {
        },
        xiugai:function (row) {
            //console.log(row);
-            this.$router.push({ name: 'modifygoods', params: row});
+            this.$router.push({ name: 'modifygoods', params: row.id});
+
        },
     handleCurrentChange(val) {
       this.page = val;
