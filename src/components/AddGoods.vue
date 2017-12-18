@@ -20,7 +20,7 @@
       <el-input v-model="formLabelAlign.img"></el-input>
     </el-form-item>
     <el-form-item label="类目">
-      <el-select v-model="formLabelAlign.category" placeholder="请选类目" style="width: 100%">
+      <el-select v-model="formLabelAlign.category" placeholder="请选类目" style="width: 100%" @change="changeValue">
         <el-option v-for="cat in categoryList"  :label="cat.categoryName" :value="cat.categoryName"></el-option>
       </el-select>
     </el-form-item>
@@ -40,6 +40,7 @@
       return {
         labelPosition: 'top',
         categoryList:[],
+        xzcategory:'',
         formLabelAlign: {
           name: '',
           price: '',
@@ -64,7 +65,32 @@
 
         },
       tijiao(){
-
+        this.$ajax.get('http://10.128.4.164:8080/seller/product/sava',
+          {
+            params:{
+              productName:this.formLabelAlign.name,
+              productPrice:this.formLabelAlign.price,
+              productStock:this.formLabelAlign.stock,
+              productDescription:this.formLabelAlign.describe,
+              productIcon:this.formLabelAlign.productIcon,
+              categoryType:this.xzcategory,
+            }
+          })
+          .then((response) =>{
+            this.$notify({
+              title: '提交成功',
+              type: 'success'
+            });
+          })
+      },
+      changeValue(value){
+        console.log(value);
+        this.xzcategory=value;
+        let obj = {};
+        obj = this.options.find((item)=>{
+          return item.value === value;
+        });
+        console.log(obj.label);
       }
     }
 

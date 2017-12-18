@@ -7,7 +7,7 @@ import Modifygoods from '@/components/Modifygoods'
 import Order from '@/components/Order'
 import categorylist from '@/components/CategoryList'
 import modifycategory from '@/components/Modifycategory'
-
+import addcategory from '@/components/Addcategory'
 Vue.use(Router)
 
 export default new Router({
@@ -46,6 +46,11 @@ export default new Router({
       path: '/modifycategory',
       name: 'modifycategory',
       component: modifycategory
+    },
+    {
+      path: '/addcategory',
+      name: 'addcategory',
+      component: addcategory
     },
   ]
 })

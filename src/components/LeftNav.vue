@@ -28,7 +28,7 @@
           <router-link :to="{name:'categorylist'}">
             <el-menu-item index="3-2">列表</el-menu-item>
           </router-link>
-          <router-link :to="{name:'modifycategory'}">
+          <router-link :to="{name:'addcategory'}">
             <el-menu-item index="3-3">新增</el-menu-item>
           </router-link>
         </el-menu-item-group>
