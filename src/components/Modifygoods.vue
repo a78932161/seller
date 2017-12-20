@@ -52,7 +52,7 @@
     },
     methods:{
         xianshi(){
-          this.goodsid= this.$route.params;
+          this.goodsid= this.$route.params.id;
           this.$ajax.get('http://10.128.4.164:8080/seller/product/index?productId='+this.goodsid)
             .then((response) =>{
               this.formLabelAlign=response.productInfo;
